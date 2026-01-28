@@ -1,1 +1,161 @@
-<!DOCTYPE html><html><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css><title>personal_website</title><link href=/static/css/app.64327b0c197d3da82a7833150f42bd43.css rel=stylesheet></head><body><div id=app></div><script type=text/javascript src=/static/js/manifest.1f42bb5eba8878bbbcd2.js></script><script type=text/javascript src=/static/js/vendor.72765489e2f8f0b355ae.js></script><script type=text/javascript src=/static/js/app.7d14b7e283429438fa06.js></script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Andrew Wu - Senior Software Engineer</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; color: #333; line-height: 1.6; }
+    a { color: #2277aa; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    
+    .hero {
+      background: linear-gradient(135deg, #2277aa 0%, #51accd 100%);
+      color: white;
+      padding: 80px 20px;
+      text-align: center;
+    }
+    .hero h1 { font-size: 3em; margin-bottom: 10px; }
+    .hero h2 { font-weight: 300; font-size: 1.4em; opacity: 0.9; margin-bottom: 20px; }
+    .hero .contact { display: flex; justify-content: center; flex-wrap: wrap; gap: 20px; }
+    .hero .contact a { color: white; opacity: 0.9; }
+    .hero .contact a:hover { opacity: 1; }
+    
+    .container { max-width: 900px; margin: 0 auto; padding: 60px 20px; }
+    
+    section { margin-bottom: 50px; }
+    section h3 { color: #2277aa; font-size: 1.5em; margin-bottom: 20px; border-bottom: 2px solid #2277aa; padding-bottom: 10px; }
+    
+    .summary { font-size: 1.1em; color: #555; }
+    
+    .job { margin-bottom: 30px; }
+    .job-header { display: flex; justify-content: space-between; flex-wrap: wrap; margin-bottom: 8px; }
+    .job h4 { color: #333; font-size: 1.2em; }
+    .job .company { color: #2277aa; font-weight: 600; }
+    .job .location { color: #777; font-size: 0.9em; }
+    .job .date { color: #777; font-size: 0.9em; }
+    .job ul { margin-left: 20px; color: #555; }
+    .job li { margin-bottom: 8px; }
+    
+    .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }
+    .skill-category h4 { color: #2277aa; margin-bottom: 8px; }
+    .skill-category p { color: #555; }
+    
+    .education h4 { color: #333; }
+    .education .degree { color: #2277aa; }
+    .education .details { color: #777; font-size: 0.9em; }
+    
+    @media (max-width: 600px) {
+      .hero h1 { font-size: 2em; }
+      .job-header { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <h1>Yuh-Chian (Andrew) Wu</h1>
+    <h2>Senior Software Engineer</h2>
+    <div class="contact">
+      <a href="mailto:andrew90622@gmail.com"><i class="fas fa-envelope"></i> andrew90622@gmail.com</a>
+      <a href="https://github.com/wuddder"><i class="fab fa-github"></i> wuddder</a>
+      <a href="https://linkedin.com/in/aycwu"><i class="fab fa-linkedin"></i> aycwu</a>
+      <span><i class="fas fa-map-marker-alt"></i> Vancouver, Canada</span>
+    </div>
+  </header>
+
+  <div class="container">
+    <section>
+      <p class="summary">Senior Software Engineer with 8+ years building scalable distributed systems at AWS, foodpanda, and Garena. Based in Vancouver.</p>
+    </section>
+
+    <section>
+      <h3><i class="fas fa-briefcase"></i> Experience</h3>
+      
+      <div class="job">
+        <div class="job-header">
+          <div>
+            <h4>Software Development Engineer</h4>
+            <span class="company">Amazon Web Services (AWS)</span>
+          </div>
+          <div>
+            <span class="location">Vancouver, Canada</span><br>
+            <span class="date">May 2023 - Present</span>
+          </div>
+        </div>
+        <ul>
+          <li>Delivered IPv6 support across 3 identity services (20B+ requests/month) by launching PrivateLink and dualstack endpoints in all 30+ AWS regions—first team in org to achieve full IPv6 compliance.</li>
+          <li>Shipped Pagination GA for AWS SCIM (40M+ list requests/day), redesigning APIs to enable full auditability while maintaining 100% backward compatibility.</li>
+          <li>Delivered Multi-Region Replication for identity data: built Encryption Library enabling secure cross-region sharing with account-level isolation, and async Backfiller to migrate 500M+ records.</li>
+          <li>Built CMK-compliant in-memory search engine using Lucene, enabling fuzzy/wildcard queries across 100M+ records with sub-second P99 latency.</li>
+          <li>Reduced integration test runtime by 70% (11 min → 3 min), speeding up deployment pipeline.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-header">
+          <div>
+            <h4>Backend Engineer</h4>
+            <span class="company">foodpanda</span>
+          </div>
+          <div>
+            <span class="location">Taipei, Taiwan</span><br>
+            <span class="date">Feb 2022 - Apr 2023</span>
+          </div>
+        </div>
+        <ul>
+          <li>Launched Dine-in vertical on Pandora platform, extending order system with auth middleware to enable in-restaurant dining—expanding foodpanda into a new business line.</li>
+          <li>Unified incentive domain across delivery and dine-in by coordinating 2 backend teams, enabling consistent promo campaigns across all order types.</li>
+          <li>Established Datadog observability stack (dashboards, alerting, tracing) for greenfield dine-in service.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-header">
+          <div>
+            <h4>Software Engineer</h4>
+            <span class="company">Garena</span>
+          </div>
+          <div>
+            <span class="location">Taipei, Taiwan</span><br>
+            <span class="date">Sep 2018 - Feb 2022</span>
+          </div>
+        </div>
+        <ul>
+          <li>Built global event platform handling 2B+ requests/day across US, Southeast Asia, and South America.</li>
+          <li>Improved API throughput by 80% via Redis caching and protobuf serialization, supporting 10x traffic spikes during peak game events.</li>
+          <li>Led frontend team of 10 engineers, establishing CI/CD pipelines and mentoring 5+ new hires.</li>
+          <li>Deployed Sentry on Kubernetes (Helm), enabling error monitoring across 50+ services.</li>
+          <li>Drove engineering culture through 10+ technical talks on RxJS, algorithms, and serialization.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h3><i class="fas fa-code"></i> Skills</h3>
+      <div class="skills-grid">
+        <div class="skill-category">
+          <h4>Languages</h4>
+          <p>Java, Go, Python, TypeScript, JavaScript</p>
+        </div>
+        <div class="skill-category">
+          <h4>AWS</h4>
+          <p>EC2, Lambda, Step Functions, DynamoDB, CDK, CloudFormation, VPC, Route53, API Gateway, SNS, SQS</p>
+        </div>
+        <div class="skill-category">
+          <h4>Web/Backend</h4>
+          <p>Django, Vue, Node.js, MySQL, Redis, Kafka, Docker, Kubernetes</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="education">
+      <h3><i class="fas fa-graduation-cap"></i> Education</h3>
+      <h4>National Taiwan University (NTU)</h4>
+      <span class="degree">M.S. in Computer Science and Engineering</span>
+      <p class="details">Sep 2016 - Jul 2018 · Taipei, Taiwan · Research in Human-Computer Interaction</p>
+    </section>
+  </div>
+</body>
+</html>
