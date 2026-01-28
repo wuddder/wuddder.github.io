@@ -43,7 +43,7 @@ function App() {
     <>
       <header>
         <div className="header-top">
-          <img className="avatar" src="https://media.licdn.com/dms/image/v2/C5603AQEBTWFCk8yQ1A/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1642664828054?e=1771459200&v=beta&t=9iF8W3YxQWPYUJJ0XkKKvjAVhnz0L7zJE1dT9z1QOEk" alt="Andrew Wu" />
+          <img className="avatar" src="/avatar.jpg" alt="Andrew Wu" />
           <div className="header-info">
             <h1>Andrew Wu</h1>
             <p className="title">Senior Software Engineer</p>
