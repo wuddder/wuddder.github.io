@@ -1,19 +1,37 @@
 # wuddder.github.io
 
-Personal website and resume for Andrew Wu.
+Personal website for Andrew Wu.
 
-🔗 **Live site:** https://wuddder.github.io
-
-## About
-
-Senior Software Engineer based in Vancouver with 8+ years building scalable distributed systems at AWS, foodpanda, and Garena.
+🔗 **Live:** https://wuddder.github.io
 
 ## Tech Stack
 
-- Single-page HTML (no build step)
-- Font Awesome icons
-- Mobile responsive
+- React + Vite
+- Deployed via GitHub Pages
 
-## Update
+## Development
 
-Edit `index.html` directly and push. GitHub Pages deploys automatically.
+```bash
+npm install
+npm run dev
+```
+
+## Build & Deploy
+
+```bash
+npm run build
+cp -r dist/* .
+git add -A && git commit -m "Update site" && git push
+```
+
+## Structure
+
+```
+├── src/
+│   ├── App.jsx      # Main component (edit content here)
+│   ├── App.css      # Styles
+│   └── main.jsx     # Entry point
+├── assets/          # Built JS/CSS
+├── index.html       # Production entry
+└── index.dev.html   # Dev entry (used by Vite)
+```
