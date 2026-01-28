@@ -44,25 +44,26 @@ header {
   width: 64px;
   height: 64px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #2277aa, #51accd);
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 20px;
-  font-weight: 600;
+  object-fit: cover;
   flex-shrink: 0;
+}
+
+.header-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 header h1 {
   font-size: 2em;
   font-weight: 600;
-  margin-bottom: 0;
+  margin: 0;
+  line-height: 1.2;
 }
 
 .title {
   color: var(--muted);
-  margin-bottom: 24px;
+  margin: 0;
 }
 
 .intro {
